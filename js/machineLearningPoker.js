@@ -3,10 +3,9 @@ const net = new brain.NeuralNetwork({
   learningRate: 0.6 // global learning rate, useful when training using streams
 });
 
-//
-// // GENDER TO INCOME ML
-// console.log("GENDER: ");
-// console.log("Male is 0, female is 1");
+
+// // High Card ML
+// console.log("HighCard: ");
 //
 // var genderNet = new brain.NeuralNetwork();
 //
