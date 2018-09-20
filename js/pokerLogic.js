@@ -52,8 +52,8 @@ function convertToSolveable(playerHand) {
   let convertedHand = [];
   for (var i = 0; i < playerHand.length; i++) {
     convertedHand.push(playerHand[i].suit + playerHand[i].values);
-    console.log(convertedHand);
   }
+  console.log(convertedHand);
   return convertedHand;
 }
 class Player {
@@ -67,16 +67,35 @@ class Player {
     for (var i = 0; i < handSize; i++) {
       this.hand.push(deck.drawCard());
     }
-    console.log(this.hand);
     return this.hand;
   }
 }
+function determineWinner(solvedPlayerHand, solvedComputerHand){
+  if(solvedComputerHand.rank > solvedPlayerHand.rank){
+    return "computer wins"
+  }
+  if(solvedPlayerHand.rank > solvedComputerHand.rank){
+    return "player wins"
+  }
+  if(solvedPlayerHand.rank = solvedComputerHand.rank){
+    return "tie"
+  }
+}
+// Use "solved.rank" to see if one hand beats another. Then use "solved.values[0]" to see which high card is better in case of a tie. This will probably require looping through the whole hand until one is better in case there is like a 4 of a kind and there is only one other high card.
 
 const deck = new CardDeck();
 let player = new Player();
-let testHand = player.drawHand();
+let computer = new Player();
 
-converted = convertToSolveable(testHand);
+let computerHand = computer.drawHand();
+let playerHand = player.drawHand();
 
-let solved = Hand.solve(converted)
-console.log(solved);
+let convertedPlayerHand = convertToSolveable(playerHand);
+let convertedComputerHand = convertToSolveable(computerHand);
+
+let solvedPlayerHand = Hand.solve(convertedPlayerHand)
+let solvedComputerHand = Hand.solve(convertedComputerHand)
+console.log(solvedPlayerHand);
+console.log(solvedComputerHand);
+
+console.log(determineWinner(solvedPlayerHand, solvedComputerHand));
