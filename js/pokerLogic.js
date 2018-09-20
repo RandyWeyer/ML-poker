@@ -1,39 +1,60 @@
-let handSize = 5;
-let iterations = 6
-class cardDeck {
-  constructor() {
-    this.deck = [];
+let handSize = 7;
+let shuffleIterations = 6
 
-    const suits = ['Clubs', 'Diamonds', 'Spades', 'Hearts'];
-    const values = ['Ace', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King'];
+class Card {
+  constructor(suit, values){
+    this.suit = suit;
+    this.values = values;
+  }
+}
+class CardDeck {
+  constructor(){
+    this.deck = [];
+    this.resetDeck();
+    this.shuffle();
+  }
+  resetDeck(){
+    const suits = ['c', 'd', 's', 'h'];
+    const values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K'];
 
     for (let suit in suits) {
       for (let value in values) {
-        this.deck.push(`${values[value]} of ${suits[suit]}`);
+        let card = new Card(values[value], suits[suit]);
+        this.deck.push(card);
       }
     }
   }
+
   shuffle(){
     const { deck } = this;
     let m = deck.length, j;
 
     // Run shuffle 6 times recursively to make sure deck is random
-    if(iterations>=0){
+    if(shuffleIterations>=0){
       while(m){
         j = Math.floor(Math.random() * m--);
         [deck[m], deck[j]] = [deck[j], deck[m]];
       }
-      iterations--;
+      shuffleIterations--;
       this.shuffle();
     } else {
-      iterations = 6;
+      shuffleIterations = 6;
       return this;
     }
-
   }
+
   drawCard(){
     return this.deck.pop();
   }
+}
+
+function convertToSolveable(playerHand) {
+  let convertedHand = [];
+  for (var i = 0; i < playerHand.length; i++) {
+    convertedHand.push(playerHand[i].suit + playerHand[i].values);
+    console.log(convertedHand);
+  }
+  return convertedHand;
 }
 class Player {
   constructor(){
@@ -42,14 +63,20 @@ class Player {
 
   drawHand(){
     this.hand = [];
-    let deck = new cardDeck();
-    deck.shuffle();
+    let deck = new CardDeck();
     for (var i = 0; i < handSize; i++) {
       this.hand.push(deck.drawCard());
     }
     console.log(this.hand);
+    return this.hand;
   }
 }
 
-const deck = new cardDeck();
+const deck = new CardDeck();
 let player = new Player();
+let testHand = player.drawHand();
+
+converted = convertToSolveable(testHand);
+
+let solved = Hand.solve(converted)
+console.log(solved);
