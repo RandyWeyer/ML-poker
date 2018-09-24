@@ -1,5 +1,6 @@
-let handSize = 7;
+let handSize = 20;
 let shuffleIterations = 6
+let handWinner = "";
 
 class Card {
   constructor(suit, values){
@@ -53,6 +54,7 @@ function convertToSolveable(playerHand) {
   for (var i = 0; i < playerHand.length; i++) {
     convertedHand.push(playerHand[i].suit + playerHand[i].values);
   }
+  Hand.solve(convertedHand)
   console.log(convertedHand);
   return convertedHand;
 }
@@ -71,15 +73,13 @@ class Player {
   }
 }
 function determineWinner(solvedPlayerHand, solvedComputerHand){
-  if(solvedComputerHand.rank > solvedPlayerHand.rank){
-    return "computer wins"
+  let winner = Hand.winners([solvedPlayerHand, solvedComputerHand])
+  if (winner.toString() == solvedPlayerHand.toString()) {
+    console.log("Player Wins");
+  } else {
+    console.log("Computer Wins");
   }
-  if(solvedPlayerHand.rank > solvedComputerHand.rank){
-    return "player wins"
-  }
-  if(solvedPlayerHand.rank = solvedComputerHand.rank){
-    return "tie"
-  }
+  return winner;
 }
 // Use "solved.rank" to see if one hand beats another. Then use "solved.values[0]" to see which high card is better in case of a tie. This will probably require looping through the whole hand until one is better in case there is like a 4 of a kind and there is only one other high card.
 
@@ -98,4 +98,6 @@ let solvedComputerHand = Hand.solve(convertedComputerHand)
 console.log(solvedPlayerHand);
 console.log(solvedComputerHand);
 
-console.log(determineWinner(solvedPlayerHand, solvedComputerHand));
+let winner = determineWinner(solvedPlayerHand, solvedComputerHand);
+console.log(winner);
+console.log(winner.toString());
