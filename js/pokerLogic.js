@@ -1,4 +1,4 @@
-let handSize = 20;
+let handSize = 7;
 let shuffleIterations = 6
 let handWinner = "";
 
