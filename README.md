@@ -10,7 +10,7 @@
   * Computer uses machine learning to
 
 ### Stretch Goals
-  * User create and log into their account
+  * User can create and log into their account
   * User can track statistics and overall winnings on their profile
   * User can play against multiple computers with different machine learning parameters
   * User can control the parameters of the machine learning computer
