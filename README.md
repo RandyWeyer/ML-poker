@@ -7,7 +7,9 @@
 ### MVP Specs
   * User and computer players will be dealt a hand of cards
   * Hands can be evaluated to see which one wins
-  * Computer uses machine learning to
+  * Computer uses machine learning to adapt to poker probabilities.
+
+  ![Naive Bayes Illustration](https://raw.githubusercontent.com/RandyWeyer/ML-poker/master/img/NaiveBayes.jpg)
 
 ### Stretch Goals
   * User can create and log into their account

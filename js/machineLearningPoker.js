@@ -52,7 +52,7 @@ function trainingDetermineWinner(solvedComputerHandOriginal, solvedComputerHandR
 }
 
 
-  for (var i = 0; i < 5; i++) {
+  for (var i = 0; i < 500; i++) {
     tempInput = pokerHandDataset[i];
     var convertedInput = convertTrainingToSolvable(tempInput);
 
@@ -75,10 +75,10 @@ function trainingDetermineWinner(solvedComputerHandOriginal, solvedComputerHandR
 
   for (var i = 0; i < 9; i++) {
     tempWinType = winningRanks[i];
-    var winChanceOutput = winChanceNet.run({ handType: tempWinType });
+    var winChanceOutput = winChanceNet.run({ input: tempWinType });
     console.log(tempWinType + ": ");
     console.log(winChanceOutput);
   }
 
-  var winChanceOutput2 = winChanceNet.run({ handType: 'OnePair' });
+  var winChanceOutput2 = winChanceNet.run({ input: 'OnePair' });
   console.log(winChanceOutput2);
