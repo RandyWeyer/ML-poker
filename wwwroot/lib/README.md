@@ -27,7 +27,6 @@
   * Error404
 
 ### Technologies Used
-  * C# ASP.NET
   * Javascript
   * React
   * Redux
