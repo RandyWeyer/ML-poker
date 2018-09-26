@@ -10,6 +10,10 @@ using Microsoft.Extensions.Logging;
 
 namespace ML_poker
 {
+    public static class DBConfiguration
+    {
+      public static string ConnectionString = "server=localhost;user id=root;password=root;port=8889;database=poker_machine_learning;";
+    }
     public class Startup
     {
         public Startup(IHostingEnvironment env)
