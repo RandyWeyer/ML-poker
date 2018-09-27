@@ -8,28 +8,25 @@ namespace ML_poker.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
+      [HttpGet("/")]
+      public ActionResult Index()
+      {
+          return View();
+      }
+      [HttpGet("/playing-board")]
+      public ActionResult PlayingBoard()
+      {
+          return View();
+      }
+      [HttpPost("/teach-machine")]
+      public ActionResult Menu()
+      {
+        if(Request.Form["outcome"] == "win"){
+          // AddHandWin();
+        } else if(Request.Form["outcome"] == "lose"){
+          // AddHandLose();
         }
-
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        public IActionResult Error()
-        {
-            return View();
-        }
+          return RedirectToAction("Index");
+      }
     }
 }
