@@ -28,10 +28,10 @@ namespace ML_poker.Models
         var cmd = conn.CreateCommand() as MySqlCommand;
         cmd.CommandText = @"UPDATE hand SET win = win + 1, total = total + 1 CASE WHEN name = @handName END, CASE WHEN id=10 END;";
 
-        MySqlParameter handName = new MySqlParameter();
-        searchId.ParameterName = "@handName";
-        searchId.Value = _name;
-        cmd.Parameters.Add(handName);
+        MySqlParameter searchName = new MySqlParameter();
+        searchName.ParameterName = "@searchName";
+        searchName.Value = handName;
+        cmd.Parameters.Add(searchName);
 
         cmd.ExecuteNonQuery();
         _win = _win + 1;
@@ -49,10 +49,10 @@ namespace ML_poker.Models
         var cmd = conn.CreateCommand() as MySqlCommand;
         cmd.CommandText = @"UPDATE hand SET lose = lose + 1, total = total + 1 CASE WHEN name = @handName END, CASE WHEN id=10 END;";
 
-        MySqlParameter handName = new MySqlParameter();
-        searchId.ParameterName = "@handName";
-        searchId.Value = _name;
-        cmd.Parameters.Add(handName);
+        MySqlParameter searchName = new MySqlParameter();
+        searchName.ParameterName = "@searchName";
+        searchName.Value = _name;
+        cmd.Parameters.Add(searchName);
 
         cmd.ExecuteNonQuery();
         _lose = _lose + 1;

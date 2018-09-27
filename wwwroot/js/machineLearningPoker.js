@@ -52,7 +52,7 @@ function trainingDetermineWinner(solvedComputerHandOriginal, solvedComputerHandR
 }
 
 
-  for (var i = 0; i < 500; i++) {
+  for (var i = 0; i < 50; i++) {
     tempInput = pokerHandDataset[i];
     var convertedInput = convertTrainingToSolvable(tempInput);
 
