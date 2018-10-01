@@ -2,6 +2,123 @@
     Layout = "_SplashPage";
 }
 
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-</p>
+
+<nav class="navbar">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="#"></a>
+
+    <ul class="nav navbar-right">
+      <li><button class="btn btn-default btn-login-splash" (click)="login()">Login</button></li>
+      <li><button class="btn btn-default btn-signin-splash" href="#">Sign Up</button></li>
+    </ul>
+  </div>
+</nav>
+
+<div id="fullpage" class="fullpage-wrapper">
+
+  <div class="section active" id="section1" data-anchor="page1">
+    <div class="fp-bg">
+    </div>
+    <div class="fadeInUp animated">
+      <img src="../../src/assets/img/logos/Tumblr_Logos_2018.03.06_Wordmark White.png" alt="tumblr" id="logo-word"/>
+      <h2>
+        A poker game that adapts to how you play.
+      </h2>
+      <div class="center-input-group">
+          <form>
+            <input class="form-control" type="text" placeholder="Email" #inputUserEmail>
+            <input class="form-control" type="password" placeholder="Password" #inputUserPassword>
+            <input class="form-control" type="text" placeholder="Username" #inputUserName>
+            <button class="btn btn-primary splash-login" type="click" (click)="signUp(inputUserEmail.value, inputUserPassword.value, '', '', inputUserName.value)" href="/dashboard">Sign Up</button>
+          </form>
+      </div>
+
+      <!-- Temp access to dashboard -->
+      <a href="/playing-board">TEMP ACCESS TO PLAY BOARD</a>
+      <!-- Temp access to dashboard -->
+
+    </div>
+  </div>
+
+  <div class="section" id="section2" data-anchor="page2">
+    <div class="fp-bg">
+    </div>
+
+    <div class="jumbotron">
+      <h1 class="section-title">Machine Learning</h1>
+      <p>
+        An algorithm that causes a computer to get progressive better at tasks without being explicitly programmed. It often takes data and inputs to predict future outputs or make generalizations based on the data.
+      </p>
+    </div>
+
+
+  </div>
+  <div class="section row" id="section3" data-anchor="page3">
+    <div class="jumbotron">
+      <h3 class="section-title">Natural Selection (Evolution) as a model for Machine Learning</h3>
+      <p>
+        One of the primary ways that nature makes iterative improvements in each generation. Each parent may have many offspring but only those that are most "fit" to survive in a given environment will thrive and create more offspring. This same model can be applied to machines. Each generation is measured for a "fitness" score and the ones that perform best pass components of their algorithms down to future generations.
+      </p>
+    </div>
+  </div>
+  <div class="section" id="section4" data-anchor="page4">
+    <div class="fp-bg"></div>
+    <div class="row">
+      <div class="user-img-column col-md-1 offset-1">
+        <!-- user column images go here -->
+
+      </div>
+      <div class="dashboard-graphic col-md-4">
+
+      </div>
+      <!-- End of dashboard column -->
+
+      <div class="col-md-4 sample-blog-section-text">
+        <h1 class="section-title">You already know how this works.</h1>
+        <p>
+          Once you follow a blog, all of its posts show up in your dashboard, just like you’d expect. See something great? Reblog it to your own blog. Add commentary if you like. Make it your own. Other people will do the same to your posts. That’s how you meet people here.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="section" id="section5" data-anchor="page5">
+    <div class="fp-bg"></div>
+    <div class="create-icon">
+      <div class="row">
+        <div class="post-icon col-lg-3">
+          <i style='color:#f2992e;' class="icon-circle icon-font-size"></i><br><p class="icon-caption">Text</p>
+        </div>
+        <div class="post-icon col-lg-3">
+          <i style='color:#f2992e;' class="icon-circle icon-camera"></i><br><p class="icon-caption">Photo</p>
+        </div>
+        <div class="post-icon col-lg-3">
+          <i style='color:#f2992e;' class="icon-circle icon-quotes-left"></i><br><p class="icon-caption">Quote</p>
+        </div>
+        <div class="post-icon col-lg-3">
+          <i style='color:#f2992e;' class="icon-circle icon-link"></i><br><p class="icon-caption">Link</p>
+        </div>
+      </div>
+      <br>
+      <div class="row offset-lg-1">
+        <div class="post-icon col-lg-4">
+          <i style='color:#f2992e;' class="icon-circle icon-bubbles"></i><br><p class="icon-caption">Chat</p>
+        </div>
+        <div class="post-icon col-lg-3">
+          <i style='color:#f2992e;' class="icon-circle icon-headphones"></i><br><p class="icon-caption">Audio</p>
+        </div>
+        <div class="post-icon col-lg-4">
+          <i style='color:#f2992e;' class="icon-circle icon-video-camera"></i><br><p class="icon-caption">Video</p>
+        </div>
+      </div>
+    </div>
+    <h1 class="section-title">Seriously, put anything you want here.</h1>
+    <p>
+      Seven post types to get you started. Your brain can do the rest. This thing is yours. Use it however you like.
+    </p>
+  </div>
+  <div class="section" id="section6" data-anchor="page6">
+    <div class="fp-bg"></div>
+    Some section
+  </div>
+</div>

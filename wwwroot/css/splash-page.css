@@ -1,0 +1,168 @@
+body {
+  background-color: #35465c;
+}
+h5 {
+  color: black;
+}
+.navbar {
+  position: absolute;
+  width: 100%;
+  z-index: 9;
+  background: rgba(0,0,0,0);
+}
+.center-input-group {
+  text-align: center;
+  margin: auto 40% 30px 40%;
+  max-width: 20%;
+}
+.center-input-group * {
+  border-radius: 0px;
+}
+.center-input-group .btn {
+  margin: 5px 0 20px 0;
+}
+::placeholder {
+    color: darkgrey;
+    opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: darkgrey;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: darkgrey;
+}
+.btn-signin-splash {
+  margin: 5px;
+  background:rgba(255,255,255,1);
+}
+.btn-login-splash {
+  margin: 5px;
+  color: white;
+  background: rgba(0,0,0,0.2);
+}
+.navbar-brand {
+  width: 42px;
+  height: 68px;
+  display: block;
+    background-image: url('../../../src/assets/img/logos/1@2x.png');
+  -webkit-filter: brightness(1000%); /* Safari */
+  filter: brightness(1000%);
+}
+:hover.navbar-brand {
+  -webkit-filter: brightness(100%); /* Safari */
+  filter: brightness(100%);
+  background-image: url('../../../src/assets/img/logos/1@2x.png');
+  animation: play 1s steps(48) infinite;
+}
+.btn-primary {
+  background: rgb(100,157,200);
+  border: none;
+}
+.splash-login {
+  width: 100%;
+}
+.section {
+  color: black;
+  text-align:center;
+}
+.section h1 {
+  font-size: 60px;
+  margin: 20px;
+}
+.section h2 {
+  margin: 20px;
+  font-size: 16px;
+}
+.section p {
+  margin: 0 20% 0 20%;
+  font-size: 1em;
+}
+.jumbotron {
+  padding: 2%;
+  max-width: 70%;
+  margin: auto;
+}
+.blogs-column {
+  width: 300px;
+  margin: 20px;
+}
+.dashboard-graphic {
+  max-width: 600px;
+  margin: 50px;
+}
+.card-img {
+  max-width: 600px;
+}
+.card-text {
+  color: black;
+}
+.card-actions {
+  margin: 5px;
+}
+.sample-blog-entries {
+
+}
+.number-of-notes {
+  font-weight: bold;
+  color: #8f8f8f;
+}
+.left-align {
+  text-align: left;
+}
+.right-align {
+  float: right;
+  text-align: right;
+}
+.sample-blog-section-text {
+  text-align: left;
+  margin: 25% 0 0 0;
+}
+.card {
+  margin: 10px;
+}
+.create-icon {
+  margin: auto 20% 30px 20%;
+}
+.post-icon {
+ margin: 50px 0 50px 0;
+}
+.icon-circle {
+  margin: 50px 0 50px 0;
+  padding: 50px;
+  background-color: white;
+  border-radius: 50%;
+}
+.icon-caption {
+  padding-top: 60px;
+  font-weight: bolder;
+}
+#section1 {
+  background-image: url('/images/circuits/circuit1.jpg');
+  background-size: cover;
+  background-position: center 80%;
+}
+#section2 {
+  background-image: url('/images/circuits/circuit2.jpg');
+  background-size: cover;
+  background-position: center 80%;
+}
+#section3 {
+  background-image: url('/images/circuits/circuit3.jpg');
+  background-size: cover;
+  background-position: center 80%;
+}
+#section4 {
+  background-image: url('/images/circuits/circuit4.jpg');
+  background-size: cover;
+  background-position: center 80%;
+}
+#section5 {
+  background-image: url('/images/circuits/circuit5.jpg');
+  background-size: cover;
+  background-position: center 80%;
+}
+#section6 {
+  background-image: url('/images/circuits/circuit6.jpg');
+  background-size: cover;
+  background-position: center 80%;
+}
